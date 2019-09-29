@@ -1,0 +1,8 @@
+
+GSL_CFLAGS = -IC:/lib64/GSL/include
+GSL_LIBS   = -LC:/lib64/GSL/lib -lgsl -lgslcblas
+RCPP_LDFLAGS = 
+
+# combine with standard arguments for R
+PKG_CPPFLAGS = -W $(GSL_CFLAGS) -I../inst/include -fopenmp -lgomp
+PKG_LIBS += $(GSL_LIBS) $(RCPP_LDFLAGS) $(LAPACK_LIBS) $(BLAS_LIBS) $(FLIBS) -fopenmp -lgomp

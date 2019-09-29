@@ -1,0 +1,1 @@
+double dmixstc(arma::colvec xx, double pro2, arma::colvec mu_neu, arma::mat Sigma_neu, arma::mat delta_neu, double nu_neu);
